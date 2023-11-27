@@ -1,0 +1,66 @@
+<div class="topnav">
+  <h1 class="logo">Hello 👋</h1>
+  <ul class="navlinks">
+    <a href="/"
+      ><li class="<%= currentPage === 'home' ? 'active' : '' %>">🏠 Home</li></a
+    >
+    <a href="/education"
+      ><li class="<%= currentPage === 'edu' ? 'active' : '' %>">
+        🏫 Education
+      </li></a
+    >
+    <a href="/skills"
+      ><li class="<%= currentPage === 'skills' ? 'active' : '' %>">
+        💼 Skills
+      </li></a
+    >
+  </ul>
+</div>
+
+<style>
+  .topnav {
+    width: 900px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 3px solid #1dd1a1; */
+  }
+
+  .topnav ul {
+    display: flex;
+  }
+
+  .topnav li {
+    margin: 10px;
+    list-style-type: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: #1dd1a1;
+  }
+
+  .active {
+    color: #1dd1a1;
+  }
+
+  @media (max-width: 930px) {
+    .topnav {
+      height: 140px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: none;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      margin: 0 15px;
+    }
+  }
+</style>
